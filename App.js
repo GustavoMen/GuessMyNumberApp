@@ -1,13 +1,8 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
+import StartGameScreen from "./screens/StartGameScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Guess My Number</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <StartGameScreen />;
 }
 
 const styles = StyleSheet.create({
