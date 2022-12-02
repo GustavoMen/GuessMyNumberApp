@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   buttonInnerContainer: {
-    backgroundColor: "#72063c",
+    backgroundColor: "#0019FF",
     paddingVertical: 8,
     paddingHorizontal: 16,
     elevation: 2,
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#ffffff",
     textAlign: "center",
+    fontWeight: "bold",
   },
 
   pressed: {
