@@ -8,7 +8,7 @@ export default function App() {
       <StatusBar style="light" />
       <View style={styles.rootViewScreen}>
         <ImageBackground
-          source={require("./assets/Images/dark-canvas.gif")}
+          source={require("./assets/Images/background.jpg")}
           resizeMode="cover"
           style={styles.rootScreen}
           imageStyle={styles.backgroundImage}
@@ -27,10 +27,10 @@ const styles = StyleSheet.create({
 
   rootViewScreen: {
     flex: 1,
-    backgroundColor: "#0019FF",
+    backgroundColor: "#222629",
   },
 
   backgroundImage: {
-    opacity: 0.4,
+    opacity: 0.14,
   },
 });
