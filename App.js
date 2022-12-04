@@ -1,6 +1,7 @@
 import { StyleSheet, ImageBackground, View } from "react-native";
 import StartGameScreen from "./screens/StartGameScreen";
 import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 
 export default function App() {
   return (
