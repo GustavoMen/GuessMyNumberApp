@@ -1,9 +1,11 @@
 import { StyleSheet, ImageBackground, View } from "react-native";
 import StartGameScreen from "./screens/StartGameScreen";
+import SetDifficulty from "./components/SetDifficulty";
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 
 export default function App() {
+  const [modalIsVisible, setModalIsVisible] = useState(true);
   return (
     <>
       <StatusBar style="light" />
@@ -15,6 +17,7 @@ export default function App() {
           imageStyle={styles.backgroundImage}
         >
           <StartGameScreen />
+          <SetDifficulty visible={modalIsVisible} />
         </ImageBackground>
       </View>
     </>
