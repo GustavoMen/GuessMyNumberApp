@@ -1,8 +1,8 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 
-function PrimaryButton({ children }) {
+function PrimaryButton({ children, onPressFunction }) {
   function pressHandler() {
-    console.log("Pressed!");
+    onPressFunction();
   }
 
   return (

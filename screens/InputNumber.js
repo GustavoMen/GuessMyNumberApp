@@ -1,7 +1,7 @@
 import { TextInput, View, StyleSheet } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
-function StartGameScreen() {
+function InputNumber() {
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -21,7 +21,7 @@ function StartGameScreen() {
   );
 }
 
-export default StartGameScreen;
+export default InputNumber;
 
 const styles = StyleSheet.create({
   inputContainer: {

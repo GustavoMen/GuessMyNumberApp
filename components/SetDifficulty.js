@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Modal, View, StyleSheet, Text } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import PrimaryButton from "./PrimaryButton";
 
 function SetDifficulty(props) {
-  const [selectedValue, setSelectedValue] = useState("java");
+  const [selectedValue, setSelectedValue] = useState("Normal");
 
   return (
     <Modal visible={props.visible} animationType="slide">
@@ -18,6 +19,9 @@ function SetDifficulty(props) {
           <Picker.Item label="Normal" value="Normal" />
           <Picker.Item label="Hard" value="Hard" />
         </Picker>
+        <PrimaryButton onPressFunction={props.onPressFunction}>
+          Salvar
+        </PrimaryButton>
       </View>
     </Modal>
   );
