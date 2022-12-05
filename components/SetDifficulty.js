@@ -3,11 +3,16 @@ import { Modal, View, StyleSheet, Text } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import PrimaryButton from "./PrimaryButton";
 
-function SetDifficulty(props) {
+function SetDifficulty({ visible, onPressFunction, saveFunction }) {
   const [selectedValue, setSelectedValue] = useState("Normal");
+  // Save Function
+  function saveDifficulty() {
+    saveFunction(selectedValue);
+    onPressFunction();
+  }
 
   return (
-    <Modal visible={props.visible} animationType="slide">
+    <Modal visible={visible} animationType="slide">
       <View style={styles.container}>
         <Text>Teste Um</Text>
         <Picker
@@ -19,9 +24,7 @@ function SetDifficulty(props) {
           <Picker.Item label="Normal" value="Normal" />
           <Picker.Item label="Hard" value="Hard" />
         </Picker>
-        <PrimaryButton onPressFunction={props.onPressFunction}>
-          Salvar
-        </PrimaryButton>
+        <PrimaryButton onPressFunction={saveDifficulty}>Salvar</PrimaryButton>
       </View>
     </Modal>
   );

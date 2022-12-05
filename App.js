@@ -1,18 +1,8 @@
-import { StyleSheet, ImageBackground, View, Image, Text } from "react-native";
-import InputNumber from "./screens/InputNumber";
-import SetDifficulty from "./components/SetDifficulty";
+import { StyleSheet, ImageBackground, View } from "react-native";
+import StartGameScreen from "./screens/StartGameScreen";
 import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
-import PrimaryButton from "./components/PrimaryButton";
 
 export default function App() {
-  const [modalIsVisible, setModalIsVisible] = useState(false);
-
-  function changeModalView() {
-    modalIsVisible === true
-      ? setModalIsVisible(false)
-      : setModalIsVisible(true);
-  }
   return (
     <>
       <StatusBar style="light" />
@@ -23,17 +13,7 @@ export default function App() {
           style={styles.rootScreen}
           imageStyle={styles.backgroundImage}
         >
-          <View style={styles.configButton}>
-            <PrimaryButton onPressFunction={changeModalView}>
-              <Text> Change your chalange</Text>
-            </PrimaryButton>
-          </View>
-
-          <SetDifficulty
-            visible={modalIsVisible}
-            onPressFunction={changeModalView}
-          />
-          <InputNumber />
+          <StartGameScreen />
         </ImageBackground>
       </View>
     </>
@@ -52,15 +32,5 @@ const styles = StyleSheet.create({
 
   backgroundImage: {
     opacity: 0.14,
-  },
-
-  configButton: {
-    marginTop: 100,
-  },
-
-  image: {
-    width: 30,
-    height: 30,
-    marginBottom: 10,
   },
 });
