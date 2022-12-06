@@ -3,7 +3,7 @@ import PrimaryButton from "../components/PrimaryButton";
 import SetDifficulty from "../components/SetDifficulty";
 import { useState } from "react";
 
-function StartGameScreen() {
+function StartGameScreen({ onPickNumber }) {
   // Modal for configuration of difficulty Levels
   const [configIsVisible, setConfigIsVisible] = useState(true);
 
@@ -43,7 +43,7 @@ function StartGameScreen() {
       return;
     }
 
-    console.log("valid number");
+    onPickNumber(chosenNumber);
   }
 
   return (
