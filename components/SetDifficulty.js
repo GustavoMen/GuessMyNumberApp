@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Modal, View, StyleSheet, Text } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import PrimaryButton from "./PrimaryButton";
+import Color from "../constants/colors";
 
 function SetDifficulty({ visible, onPressFunction, saveFunction }) {
   const [selectedValue, setSelectedValue] = useState("Normal");
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 40,
     alignItems: "center",
-    backgroundColor: "#ffffff",
+    backgroundColor: Color.text,
   },
 
   picker: {

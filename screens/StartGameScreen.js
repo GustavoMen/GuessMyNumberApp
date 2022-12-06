@@ -2,6 +2,7 @@ import { TextInput, View, StyleSheet, Text, Alert } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import SetDifficulty from "../components/SetDifficulty";
 import { useState } from "react";
+import Color from "../constants/colors";
 
 function StartGameScreen({ onPickNumber }) {
   // Modal for configuration of difficulty Levels
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 100,
     marginHorizontal: 24,
     padding: 16,
-    backgroundColor: "#474b4f",
+    backgroundColor: Color.second,
     borderRadius: 8,
     elevation: 14,
     shadowColor: "black",
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     borderBottomWidth: 2,
     borderBottomColor: "#ffffff",
-    color: "#ffffff",
+    color: Color.text,
     marginVertical: 8,
     fontWeight: "bold",
   },

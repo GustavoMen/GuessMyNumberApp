@@ -3,6 +3,7 @@ import { StyleSheet, ImageBackground, View, SafeAreaView } from "react-native";
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
 import { StatusBar } from "expo-status-bar";
+import Color from "./constants/colors";
 
 export default function App() {
   const [userNumber, SetUserNumber] = useState();
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
 
   rootViewScreen: {
     flex: 1,
-    backgroundColor: "#222629",
+    backgroundColor: Color.frist,
   },
 
   backgroundImage: {
