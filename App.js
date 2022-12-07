@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { StyleSheet, ImageBackground, View, SafeAreaView } from "react-native";
+import { StatusBar } from "expo-status-bar";
+
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
 import GameOverScreen from "./screens/GameOverScreen";
-import { StatusBar } from "expo-status-bar";
+
 import Color from "./constants/colors";
 
 export default function App() {
