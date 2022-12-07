@@ -1,6 +1,6 @@
 import { TextInput, View, StyleSheet, Text, Alert } from "react-native";
-import PrimaryButton from "../components/PrimaryButton";
-import SetDifficulty from "../components/SetDifficulty";
+import PrimaryButton from "../components/ui/PrimaryButton";
+import SetDifficulty from "../components/game/SetDifficulty";
 import { useState } from "react";
 import Color from "../constants/colors";
 

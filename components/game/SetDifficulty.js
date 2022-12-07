@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Modal, View, StyleSheet, Text } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import PrimaryButton from "./PrimaryButton";
-import Color from "../constants/colors";
+import PrimaryButton from "../ui/PrimaryButton";
+import Color from "../../constants/colors";
 
 function SetDifficulty({ visible, onPressFunction, saveFunction }) {
   const [selectedValue, setSelectedValue] = useState("Normal");
