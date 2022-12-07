@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { TextInput, View, StyleSheet, Text, Alert } from "react-native";
+
 import PrimaryButton from "../components/ui/PrimaryButton";
 import SetDifficulty from "../components/game/SetDifficulty";
-import { useState } from "react";
+import Title from "../components/ui/Title";
 import Color from "../constants/colors";
+import Card from "../components/ui/Card";
+import InstructionText from "../components/ui/InstructionText";
 
 function StartGameScreen({ onPickNumber }) {
   // Modal for configuration of difficulty Levels
@@ -49,10 +53,8 @@ function StartGameScreen({ onPickNumber }) {
 
   return (
     <>
-      <View style={styles.configButton}>
-        <PrimaryButton onPressFunction={changeConfigView}>
-          <Text> Change your chalange</Text>
-        </PrimaryButton>
+      <View style={styles.title}>
+        <Title>Guess the Number</Title>
       </View>
 
       <SetDifficulty
@@ -61,7 +63,8 @@ function StartGameScreen({ onPickNumber }) {
         saveFunction={handlerDiffuculty}
       />
 
-      <View style={styles.inputContainer}>
+      <Card>
+        <InstructionText>Enter a Number</InstructionText>
         <TextInput
           style={styles.numberInput}
           maxLength={3}
@@ -82,6 +85,11 @@ function StartGameScreen({ onPickNumber }) {
             </PrimaryButton>
           </View>
         </View>
+      </Card>
+      <View style={styles.configButton}>
+        <PrimaryButton onPressFunction={changeConfigView}>
+          <Text> Change Game Mode</Text>
+        </PrimaryButton>
       </View>
     </>
   );
@@ -90,16 +98,8 @@ function StartGameScreen({ onPickNumber }) {
 export default StartGameScreen;
 
 const styles = StyleSheet.create({
-  inputContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 100,
-    marginHorizontal: 24,
-    padding: 16,
-    backgroundColor: Color.second,
-    borderRadius: 8,
-    elevation: 14,
-    shadowColor: "black",
+  title: {
+    marginTop: 72,
   },
 
   numberInput: {
@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
   },
 
   configButton: {
-    marginTop: 100,
+    marginTop: 24,
+    marginHorizontal: 15,
   },
 });
